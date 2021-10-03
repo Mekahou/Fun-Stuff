@@ -82,7 +82,7 @@ for t in range(201):
     # save frame
     plt.savefig(filename)
     plt.close()# build gif
-with imageio.get_writer('picasso_perm.mp4', mode='I') as writer:
+with imageio.get_writer('codes\images\picasso_perm.mp4', mode='I') as writer:
     for filename in filenames:
         image = imageio.imread(filename)
         writer.append_data(image)
