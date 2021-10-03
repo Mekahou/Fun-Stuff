@@ -22,7 +22,7 @@ params = {"text.usetex": True,
 }
 plt.rcParams.update(params)
 
-img  = Image.open('codes\images\picasso.jpg') #change the path of the file here 
+img  = Image.open('codes\images\pics\picasso.jpg') #change the path of the file here 
 img_gr = ImageOps.grayscale(img)
 data = np.asarray(img_gr)
 
@@ -76,7 +76,7 @@ for t in range(201):
 
     plt.axis('off')
     plt.tight_layout()
-    filename = f'{t}.jpg'
+    filename = 'codes\images\pics\pic_'+f'{t}.jpg'
     filenames.append(filename)
     
     # save frame
