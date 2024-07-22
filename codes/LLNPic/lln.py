@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib import pyplot 
-import imageio
+import  imageio.v2 as imageio
 
 fontsize= 16
 ticksize = 14
@@ -80,8 +80,10 @@ for t in mesh:
     
     # save frame
     plt.savefig(filename)
+    print('progress =',(t/mesh[-1])*100,'%')
     plt.close()# build gif
-with imageio.get_writer('codes\LLNPic\ms_lln.mp4', mode='I') as writer:
+
+with imageio.get_writer('codes\LLNPic\ms_lln.gif', mode='I') as writer:
     for filename in filenames:
         image = imageio.imread(filename)
         writer.append_data(image)
